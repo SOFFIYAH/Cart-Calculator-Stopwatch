@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-interface rit {}
+
 export default function Timesate(value: any) {
   let [minut, setMinut] = useState(0);
   let [secnd, setSecnd] = useState(0);
+  let rice;
 
   return (
     <>
       <div className="text-9xl text-amber-950">
-        <span>{minut}</span>
+        <span>{minut < 10 ? "0" + minut : minut}</span>
         <span>:</span>
-        <span>{secnd}</span>
+        <span>{secnd < 10 ? "0" + secnd : secnd}</span>
       </div>
       {/* ================================================================ */}
       <div className="text-lg gap-2 flex justify-center items-center">
